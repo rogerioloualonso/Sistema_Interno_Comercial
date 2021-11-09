@@ -1,4 +1,4 @@
 package br.com.letscode.java.sistemacomercial.entity.loja;
 
-public class loja {
+public class Loja {
 }
