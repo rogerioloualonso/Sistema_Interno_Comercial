@@ -2,11 +2,22 @@ plugins {
     id 'org.springframework.boot' version '2.5.6'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'org.asciidoctor.convert' version '1.5.3'
+    id 'org.hidetake.swagger.generator' version '1.4.0'
 }
 
 group = 'br.com.letscode.java'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+ext {
+
+    springFoxArtifacts = ["springfox-swagger2", "springfox-swagger-ui"]
+
+    springFoxVersion = "2.6.0"
+    swaggerCodeGenVersion = "2.2.1"
+}
+
 
 configurations {
     compileOnly {
@@ -26,6 +37,27 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+task copySwaggerGeneratedCode(type: Copy) {
+
+    from "${buildDir}/swagger-code"
+    into "${projectDir}"
+}
+
+generateSwaggerCode {
+
+    configFile = file('src/main/resources/swagger/config.json')
+    components = ['models', 'apis']
+    inputFile = file('src/main/resources/swagger/petstore-api.json')
+    language = 'spring'
+}
+
+generateSwaggerCode.finalizedBy(project.tasks.copySwaggerGeneratedCode)
+
+generateSwaggerDoc {
+    inputFile = file('src/main/resources/swagger/petstore-api.json')
 }
 
 test {
