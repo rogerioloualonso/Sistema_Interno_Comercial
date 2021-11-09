@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class Endereços {
+public class Enderecos {
 
     @Id
     @GeneratedVelue(strategy = GeneretionType.IDENTITY)
