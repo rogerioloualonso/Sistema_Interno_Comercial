@@ -19,10 +19,12 @@ public class Empresa {
     private int cnpj;
     private int telefone;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany
+    @JoinColumn(name = "endereco_id")
     private List<Endereco> endereco;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany
+    @JoinColumn(name = "loja_id")
     private List<Loja> lojas;
 
 }

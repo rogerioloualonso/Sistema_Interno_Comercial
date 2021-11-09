@@ -15,10 +15,12 @@ public class Item {
 
     int qtd;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany
+    @JoinColumn(name = "produto_id")
     private Produto produto;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany
+    @JoinColumn(name = "venda_id")
     private Venda venda;
 
 }
