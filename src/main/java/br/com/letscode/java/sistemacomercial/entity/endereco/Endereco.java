@@ -1,4 +1,4 @@
 package br.com.letscode.java.sistemacomercial.entity.endereco;
 
-public class endereco {
+public class Endereco {
 }
