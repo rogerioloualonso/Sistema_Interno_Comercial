@@ -1,10 +1,10 @@
-package br.com.letscode.java.sistema_interno_comercial;
+package br.com.letscode.java.sistemacomercial;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SistemaInternoComercialApplicationTests {
+class SistemaComercialApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,13 +1,13 @@
-package br.com.letscode.java.sistema_interno_comercial;
+package br.com.letscode.java.sistemacomercial;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SistemaInternoComercialApplication {
+public class SistemaComercialApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SistemaInternoComercialApplication.class, args);
+        SpringApplication.run(SistemaComercialApplication.class, args);
     }
 
 }
