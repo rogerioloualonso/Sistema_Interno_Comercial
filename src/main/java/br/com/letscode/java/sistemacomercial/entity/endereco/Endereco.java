@@ -1,4 +1,22 @@
 package br.com.letscode.java.sistemacomercial.entity.endereco;
 
-public class Endereco {
+import lombok.Data;
+import javax.persistence.*;
+
+
+@Entity
+@Data
+public class Endereços {
+
+    @Id
+    @GeneratedVelue(strategy = GeneretionType.IDENTITY)
+    private int id;
+
+    private String rua;
+    private String bairro;
+    private String municipio;
+    private String cidade;
+    private String estado;
+    private int cep;
+
 }
