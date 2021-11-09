@@ -11,7 +11,6 @@ import java.util.List;
 @Data
 public class Empresa {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
