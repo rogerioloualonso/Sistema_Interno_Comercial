@@ -3,7 +3,6 @@ package br.com.letscode.java.sistemacomercial.entity.endereco;
 import lombok.Data;
 import javax.persistence.*;
 
-
 @Entity
 @Data
 public class Enderecos {
