@@ -4,32 +4,32 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table( name = "produto" )
-public class Produto {
+@Table( name = "vendas" )
+public class Vendas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "nome")
-    private String nome;
+    @Column(name = "data")
+    private LocalDate data;
 
-    @Column(name = "qtdEstoque")
-    private int qtdEstoque;
-
-    @Column(name = "valor")
-    private BigDecimal valor;
+    @ManyToOne
+    @JoinColumn(
+            name = "funcionario_id",
+            nullable = false
+    )
+    private Funcionario funcionario;
 
     @OneToMany(
-            mappedBy = "produto"
+            mappedBy = "vendas"
     )
-    private List<Item> item;
-
+    private List<Item> itemList;
 }

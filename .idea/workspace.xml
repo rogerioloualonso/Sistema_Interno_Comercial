@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="271d94d3-d319-44e2-ba8c-75ca496240c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/entity/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/entity/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/entity/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/entity/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/entity/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/entity/Vendas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/repository/Vendas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/repository/Vendas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="H2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -69,7 +76,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/br/com/letscode/java/sistemacomercial/entity/loja" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SistemaComercialApplication">
+  <component name="RunManager" selected="Spring Boot.SistemaApplication">
     <configuration name="SistemaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SistemaApplication" />
@@ -107,7 +114,7 @@
       <workItem from="1636490407192" duration="694000" />
       <workItem from="1636504807519" duration="3191000" />
       <workItem from="1636573859123" duration="1523000" />
-      <workItem from="1636581383605" duration="645000" />
+      <workItem from="1636581383605" duration="2898000" />
     </task>
     <servers />
   </component>
