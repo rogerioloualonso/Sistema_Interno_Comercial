@@ -13,17 +13,17 @@ public class Fornecedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String nome;
     private int telefone;
 
-    @OneToMany(mappedBy = "id")
-    private List<Endereco> endereco;
+    @ManyToOne
+    @JoinColumn(name = "endeco_id")
+    private Endereco endereco;
 
-    public Long getId() {
-        return id;
+    public Fornecedor(String nome, int telefone) {
+        this.id = null;
+        this.nome = nome;
+        this.telefone = telefone;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

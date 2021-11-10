@@ -1,5 +1,6 @@
 package br.com.letscode.java.sistemacomercial.entity.venda;
 
+import br.com.letscode.java.sistemacomercial.entity.endereco.Endereco;
 import br.com.letscode.java.sistemacomercial.entity.funcionario.Funcionario;
 import br.com.letscode.java.sistemacomercial.entity.item.Item;
 import lombok.Data;
@@ -17,12 +18,16 @@ public class Venda {
     private int id;
 
     private LocalDate data;
-    private String endereco;
 
     @OneToMany(mappedBy = "id")
     private List<Item> item;
 
-    @OneToMany(mappedBy = "id")
-    private List<Funcionario> funcionarios;
+    @ManyToOne
+    @JoinColumn(name = "funcionario_id")
+    private Funcionario funcionario;
 
+    public Venda(LocalDate data) {
+        this.id = Integer.parseInt(null);
+        this.data = data;
+    }
 }

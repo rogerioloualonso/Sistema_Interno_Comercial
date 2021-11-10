@@ -24,7 +24,15 @@ public class Loja {
     @Column(name = "telefone", length = 15)
     private String telefone;
 
-    @OneToMany(mappedBy = "id")
-    private List<Funcionario> funcionarios;
+    @ManyToOne
+    @JoinColumn(name = "funcionario_id")
+    private Funcionario funcionarios;
+
+    public Loja(String nome, String endereco, String telefone) {
+        this.id = null;
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
 }
 

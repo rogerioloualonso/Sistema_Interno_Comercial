@@ -22,8 +22,17 @@ public class Funcionario {
         private int telefone;
 
         @OneToMany(mappedBy = "id")
-        private Venda venda;
+        private List<Venda> venda;
 
-        @OneToMany(mappedBy = "id")
-        private List<Endereco> endereço;
+        @ManyToOne
+        @JoinColumn(name = "endeco_id")
+        private Endereco endereco;
+
+        public Funcionario(String nome, LocalDate dataNascimento, int cpf, int telefone) {
+                this.id = Integer.parseInt(null);
+                this.nome = nome;
+                this.dataNascimento = dataNascimento;
+                this.cpf = cpf;
+                this.telefone = telefone;
+        }
 }

@@ -1,5 +1,6 @@
 package br.com.letscode.java.sistemacomercial.entity.produto;
 
+import br.com.letscode.java.sistemacomercial.entity.endereco.Endereco;
 import br.com.letscode.java.sistemacomercial.entity.fornecedor.Fornecedor;
 import lombok.Data;
 
@@ -26,9 +27,19 @@ public class Produto {
     @Column(name = "qtdEstoque", length = 70)
     private int qtdEstoque;
 
-    @Column(name = "preco_unitario")
-    private BigDecimal preco;
+    @Column(name = "valor")
+    private BigDecimal valor;
 
-    @OneToMany(mappedBy = "id")
-    private List<Fornecedor> fornecedores;
+    @ManyToOne
+    @JoinColumn(name = "fornecedor_id")
+    private Fornecedor fornecedor;
+
+    public Produto(String nome, String marca, String descricao, int qtdEstoque, BigDecimal valor) {
+        this.id = null;
+        this.nome = nome;
+        this.marca = marca;
+        this.descricao = descricao;
+        this.qtdEstoque = qtdEstoque;
+        this.valor = valor;
+    }
 }

@@ -18,4 +18,13 @@ public class Endereco {
     private String estado;
     private int cep;
 
+    public Endereco(String rua, String bairro, String municipio, String cidade, String estado, int cep) {
+        this.id = Integer.parseInt(null);
+        this.rua = rua;
+        this.bairro = bairro;
+        this.municipio = municipio;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
+    }
 }
