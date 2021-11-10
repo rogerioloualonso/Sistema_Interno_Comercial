@@ -1,7 +1,7 @@
 target
-.idea
+.idea/
 *.iml
-.gradle
+.gradle/
 demo.iml
 mvnw
 mvnw.cmd
