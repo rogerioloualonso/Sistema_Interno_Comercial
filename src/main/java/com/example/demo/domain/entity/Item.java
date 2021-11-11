@@ -22,7 +22,7 @@ public class Item {
             name = "venda_id",
             nullable = false
     )
-    private Vendas vendas;
+    private Venda venda;
 
     @ManyToOne
     @JoinColumn(

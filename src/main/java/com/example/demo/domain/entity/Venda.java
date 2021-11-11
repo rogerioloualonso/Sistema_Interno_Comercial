@@ -1,17 +1,19 @@
 package com.example.demo.domain.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table( name = "vendas" )
-public class Vendas {
+public class Venda {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,7 +31,7 @@ public class Vendas {
     private Funcionario funcionario;
 
     @OneToMany(
-            mappedBy = "vendas"
+            mappedBy = "venda"
     )
     private List<Item> itemList;
 }

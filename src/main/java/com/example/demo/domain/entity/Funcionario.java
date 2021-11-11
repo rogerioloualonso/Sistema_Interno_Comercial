@@ -29,7 +29,7 @@ public class Funcionario {
     @OneToMany(
             mappedBy = "funcionario"
     )
-    private List<Vendas> vendasList;
+    private List<Venda> vendaList;
 
     public Funcionario(String nome, Integer cpf) {
         this.nome = nome;
