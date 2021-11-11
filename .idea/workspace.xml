@@ -4,6 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="271d94d3-d319-44e2-ba8c-75ca496240c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+
     <list default="true" id="271d94d3-d319-44e2-ba8c-75ca496240c1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +43,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/index.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -130,6 +137,7 @@
       <workItem from="1636573859123" duration="1523000" />
       <workItem from="1636581383605" duration="4755000" />
       <workItem from="1636629419074" duration="1523000" />
+      <workItem from="1636649373291" duration="7782000" />
     </task>
     <servers />
   </component>
