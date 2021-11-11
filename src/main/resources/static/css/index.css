@@ -9,24 +9,30 @@ img{
     margin-left: 35%;
 }
 
+button{
+    padding: 10px 200px !important;
+}
+
 p{
-    color: white;
     font-size: 25px;
 }
 
 button:hover{
     background-color: #1C1C1C !important;
+    color: white !important;
 }
 
 .top-button{
     margin-top: 15px !important;
 }
 
-bottom-button{
-    margin-bottom: 100px !important;
-}
-
 .back-button{
     background-color: #7A5828 !important;
+}
+
+#menu{
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
