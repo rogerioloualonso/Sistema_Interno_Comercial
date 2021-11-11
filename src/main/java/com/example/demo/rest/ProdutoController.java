@@ -11,21 +11,25 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/produtos")
+@RequestMapping("/produtos")
 
 public class ProdutoController {
+
     private Produtos produtos;
+
     public ProdutoController(Produtos produtos){
-        this.produtos=produtos;
+        this.produtos = produtos;
     }
+
     @GetMapping("{id}")
-    public Produto getClienteById( @PathVariable Integer id ){
+    public Produto getProdutoById( @PathVariable Integer id ){
         return produtos
                 .findById(id)
                 .orElseThrow(() ->
                         new ResponseStatusException(HttpStatus.NOT_FOUND,
                                 "Cliente não encontrado"));
-}
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Produto save( @RequestBody Produto produto ){
