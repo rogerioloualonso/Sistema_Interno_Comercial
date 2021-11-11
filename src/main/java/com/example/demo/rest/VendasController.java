@@ -1,6 +1,7 @@
 package com.example.demo.rest;
 
-import com.example.demo.domain.entity.Vendas;
+import com.example.demo.domain.entity.Venda;
+import com.example.demo.domain.repository.Vendas;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class VendasController {
     }
 
     @GetMapping("{id}")
-    public Vendas getVendaById(@PathVariable Integer id ){
+    public Venda getVendaById(@PathVariable Integer id ){
         return vendas
                 .findById(id)
                 .orElseThrow(() ->
@@ -28,17 +29,17 @@ public class VendasController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Vendas save(@RequestBody Vendas vendas){
-        return vendas.save(vendas);
+    public Venda save(@RequestBody Venda vendas){
+        return vendas.save(venda);
     }
 
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete( @PathVariable Integer id ){
         vendas.findById(id)
-                .map(funcionario -> {
-                    vendas.delete(vendas);
-                    return vendas;
+                .map(venda -> {
+                    vendas.delete(venda);
+                    return venda;
                 })
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
                         "Venda não encontrada") );
@@ -47,19 +48,19 @@ public class VendasController {
     @PutMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void update( @PathVariable Integer id,
-                        @RequestBody Vendas vendas){
+                        @RequestBody Venda venda){
         vendas
                 .findById(id)
                 .map(vendaExistente -> {
-                    vendas.setId(vendaExistente.getId());
-                    vendas.save(vendas);
+                    venda.setId(vendaExistente.getId());
+                    vendas.save(venda);
                     return vendaExistente;
                 }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
                         "Venda não encontrada") );
     }
 
     @GetMapping
-    public List<Vendas> find(Vendas filtro ){
+    public List<Venda> find(Venda filtro ){
         ExampleMatcher matcher = ExampleMatcher
                 .matching()
                 .withIgnoreCase()

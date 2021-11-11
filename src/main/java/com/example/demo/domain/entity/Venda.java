@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table( name = "vendas" )
-public class Vendas {
+public class Venda {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,7 +29,7 @@ public class Vendas {
     private Funcionario funcionario;
 
     @OneToMany(
-            mappedBy = "vendas"
+            mappedBy = "venda"
     )
     private List<Item> itemList;
 }
