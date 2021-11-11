@@ -59,7 +59,7 @@ public class FuncionarioController {
         funcionarios
                 .findById(id)
                 .map(funcionarioExistente -> {
-                    funcionario.setId(funcionarioExistente.getId());
+                    funcionario.setId_funcionario(funcionarioExistente.getId_funcionario());
                     funcionarios.save(funcionario);
                     return funcionarioExistente;
                 }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,

@@ -15,8 +15,8 @@ public class Funcionario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Integer id;
+    @Column(name = "id_funcionario")
+    private Integer id_funcionario;
 
     @Column(name = "nome", length = 100)
     private String nome;
