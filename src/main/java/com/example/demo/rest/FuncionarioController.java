@@ -11,16 +11,19 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/funcionarios")
+@RequestMapping("/funcionarios")
+
 public class FuncionarioController {
+
     private Funcionarios funcionarios;
+
     public FuncionarioController(Funcionarios funcionarios) {
         this.funcionarios = funcionarios;
     }
 
 
     @GetMapping("{id}")
-    public Funcionario getLojaById(@PathVariable Integer id ){
+    public Funcionario getFuncionarioById(@PathVariable Integer id ){
         return funcionarios
                 .findById(id)
                 .orElseThrow(() ->
@@ -54,7 +57,7 @@ public class FuncionarioController {
         funcionarios
                 .findById(id)
                 .map(funcionarioExistente -> {
-                    funcionario.setId(funcionarioExistente.getId());
+                    funcionario.setId_funcionario(funcionarioExistente.getId_funcionario());
                     funcionarios.save(funcionario);
                     return funcionarioExistente;
                 }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,

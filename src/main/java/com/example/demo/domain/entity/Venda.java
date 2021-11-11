@@ -25,7 +25,7 @@ public class Venda {
 
     @ManyToOne
     @JoinColumn(
-            name = "funcionario_id",
+            name = "id_funcionario",
             nullable = false
     )
     private Funcionario funcionario;

@@ -23,10 +23,10 @@ public class Produto {
     private String nome;
 
     @Column(name = "qtdEstoque")
-    private int qtdEstoque;
+    private Integer qtdEstoque;
 
     @Column(name = "valor")
-    private BigDecimal valor;
+    private float valor;
 
     @OneToMany(
             mappedBy = "produto"
