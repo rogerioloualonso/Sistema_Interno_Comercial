@@ -1,6 +1,5 @@
 package com.example.demo.rest;
 
-import com.example.demo.domain.entity.Funcionario;
 import com.example.demo.domain.entity.Vendas;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
@@ -60,7 +59,7 @@ public class VendasController {
     }
 
     @GetMapping
-    public List<Funcionario> find(Funcionario filtro ){
+    public List<Vendas> find(Vendas filtro ){
         ExampleMatcher matcher = ExampleMatcher
                 .matching()
                 .withIgnoreCase()
@@ -68,7 +67,7 @@ public class VendasController {
                         ExampleMatcher.StringMatcher.CONTAINING );
 
         Example example = Example.of(filtro, matcher);
-        return funcionarios.findAll(example);
+        return vendas.findAll(example);
     }
 
 
