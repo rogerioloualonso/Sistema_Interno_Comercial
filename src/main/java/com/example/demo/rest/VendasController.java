@@ -29,7 +29,7 @@ public class VendasController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Venda save(@RequestBody Venda vendas){
+    public Venda save(@RequestBody Venda venda){
         return vendas.save(venda);
     }
 
