@@ -1,5 +1,6 @@
 package com.example.demo.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ public class Item {
     @Column(name = "qtd")
     private Integer qtd;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(
             name = "venda_id",

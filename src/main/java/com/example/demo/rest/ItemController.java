@@ -13,13 +13,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/itens")
 public class ItemController {
+
     private Itens itens;
+
     public ItemController(Itens itens) {
         this.itens = itens;
     }
 
     @GetMapping("{id}")
-    public Item getVendaById(@PathVariable Integer id ){
+    public Item getItemById(@PathVariable Integer id ){
         return itens
                 .findById(id)
                 .orElseThrow(() ->

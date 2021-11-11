@@ -28,9 +28,4 @@ public class Produto {
     @Column(name = "valor")
     private float valor;
 
-    @OneToMany(
-            mappedBy = "produto"
-    )
-    private List<Item> item;
-
 }

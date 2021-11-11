@@ -10,7 +10,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table( name = "funcionario" )
 public class Funcionario {
 
     @Id
@@ -23,11 +22,6 @@ public class Funcionario {
 
     @Column (name = "cpf", length = 100)
     private Integer cpf;
-
-    @OneToMany(
-            mappedBy = "funcionario"
-    )
-    private List<Venda> vendaList;
 
     public Funcionario(String nome, Integer cpf) {
         this.nome = nome;
