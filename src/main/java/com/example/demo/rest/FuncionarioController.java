@@ -13,9 +13,10 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/funcionarios")
+@RequestMapping("funcionarios")
 public class FuncionarioController {
     private Funcionarios funcionarios;
+
     public FuncionarioController(Funcionarios funcionarios) {
         this.funcionarios = funcionarios;
     }
