@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface Funcionarios extends JpaRepository<Funcionario, Integer> {
 
-    @Query(value = " select * from Funcionario f where f.nome like '%:nome%' ", nativeQuery = true)
+    @Query(value = " select * from funcionario f where f.nome like '%:nome%' ", nativeQuery = true)
     List<Funcionario> encontrarPorNome(@Param("nome") String nome );
 
     @Query(" delete from Funcionario f where f.nome =:nome ")
