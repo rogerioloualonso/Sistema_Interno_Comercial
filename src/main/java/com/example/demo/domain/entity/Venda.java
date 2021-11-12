@@ -16,7 +16,6 @@ import java.util.List;
 public class Venda {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
 
