@@ -1,0 +1,33 @@
+
+{
+    "nome": "Patati Patata",
+    "cpf": 124786
+}
+
+{
+    "nome": "Salsicha",
+    "qtdEstoque": 30,
+    "valor": 9.5
+}
+
+
+{
+        "data": "2021-11-12",
+        "funcionario": {
+            "id": 5,
+            "nome": "Patati",
+            "cpf": 124786
+        },
+        "itemList": [
+            {
+                "id": 1,
+                "qtd": 2,
+                "produto": {
+                    "id": 8,
+                    "nome": "Salsicha",
+                    "qtdEstoque": 30,
+                    "valor": 9.5
+                }
+            }
+        ]
+    }
