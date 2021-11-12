@@ -30,5 +30,5 @@ Funcionalidades:
 
 ##  🧾 Documentação
 
-### - Swagger ->  localhost:3001/api-docs/
+### - Swagger ->  localhost:3001/swagger-ui.html
 
