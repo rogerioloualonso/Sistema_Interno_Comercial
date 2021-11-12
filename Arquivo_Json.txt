@@ -1,20 +1,22 @@
 
 {
+    "id" : 4,
     "nome": "Patati Patata",
     "cpf": 124786
 }
 
 {
+    "id": 7,
     "nome": "Salsicha",
     "qtdEstoque": 30,
     "valor": 9.5
 }
 
 
-{
+{       "id":1,
         "data": "2021-11-12",
         "funcionario": {
-            "id": 5,
+            "id": 4,
             "nome": "Patati",
             "cpf": 124786
         },
@@ -23,7 +25,7 @@
                 "id": 1,
                 "qtd": 2,
                 "produto": {
-                    "id": 8,
+                    "id": 7,
                     "nome": "Salsicha",
                     "qtdEstoque": 30,
                     "valor": 9.5
